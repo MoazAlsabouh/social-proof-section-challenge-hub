@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+}
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+main {
+  background: var(--white);
+  width: 100vw;
+  height: 120vh;
+}
+
+.contenar {
+  padding: 125px 0 0 160px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.contenar .back .desk .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.contenar .back .desk .bottom {
+  position: absolute;
+  bottom: -5%;
+  right: -10%;
+  z-index: 6;
+}
+
+.contenar .back .mob .top {
+  display: none;
+}
+
+.contenar .back .mob .bottom {
+  display: none;
+}
+
+.contenar .info {
+  width: 450px;
+  height: 250px;
+}
+
+.contenar .info .headinfo {
+  color: var(--very-dark-magenta);
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.contenar .info p {
+  color: var(--dark-grayish-magenta);
+  line-height: 1.5;
+  padding: 25px 0;
+}
+
+.contenar .reviews {
+  width: 550px;
+  height: 250px;
+  margin-left: 120px;
+}
+
+.contenar .reviews .card {
+  width: 440px;
+  height: 60px;
+  background: var(--light-grayish-magenta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .reviews .card:nth-child(2) {
+  margin-left: 50px;
+}
+
+.contenar .reviews .card:last-child {
+  margin-left: 100px;
+}
+
+.contenar .reviews .card .image img {
+  margin: 0 3px;
+}
+
+.contenar .reviews .card .revcard {
+  padding-left: 20px;
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+}
+
+.contenar .opinions {
+  display: flex;
+  flex-direction: row;
+  width: 1150px;
+}
+
+.contenar .opinions .card {
+  width: 350px;
+  height: 235px;
+  background: var(--very-dark-magenta);
+  margin-right: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.contenar .opinions .card .head {
+  width: 290px;
+  height: 60px;
+  display: flex;
+}
+
+.contenar .opinions .card:first-child {
+  margin-top: 50px;
+}
+
+.contenar .opinions .card:nth-child(2) {
+  margin-top: 100px;
+}
+
+.contenar .opinions .card:last-child {
+  margin-top: 150px;
+}
+
+.contenar .opinions .card .head .cardhead{
+  max-width: 75%;
+  max-height: 75%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.contenar .opinions .card .head .text {
+  padding-top: 5px;
+  padding-left: 20px;
+  flex-direction: column;
+}
+
+.contenar .opinions .card .head .text h2 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contenar .opinions .card .head .text p {
+  color: var(--soft-pink);
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.contenar .card .opincard {
+  color: var(--white);
+  padding-top: 25px;
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 100vw;
+    height: 220vh;
+  }
+  .contenar {
+    flex-direction: column;
+    padding: 80px 0 0 22px;
+    position: relative;
+  }
+  .contenar .back .desk .top{
+    display: none;
+  }
+  .contenar .back .desk .bottom{
+    display: none;
+  }
+  .contenar .back .mob .top {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .contenar .back .mob .bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .contenar .info {
+    width: 320px;
+    height: 240px;
+    text-align: center;
+  }
+  .contenar .info .headinfo {
+    font-size: 34px;
+  }
+  .contenar .info p {
+    font-size: 14px;
+    padding: 25px 0 0;
+  }
+  .contenar .reviews {
+    width: 325px;
+    height: 300px;
+    margin: 0;
+  }
+  .contenar .reviews .card {
+    width: 325px;
+    height: 75px;
+    flex-direction: column;
+  }
+  .contenar .reviews .card:nth-child(2) {
+    margin: 20px 0;
+  }
+  .contenar .reviews .card:last-child {
+    margin: 20px 0 0;
+  }
+  .contenar .reviews .card .revcard {
+    padding: 5px;
+  }
+  .contenar .opinions {
+    flex-direction: column;
+    width: 325px;
+    height: 1000px;
+  }
+  .contenar .opinions .card {
+    width: 325px;
+    height: 250px;
+  }
+  .contenar .opinions .card:first-child {
+    margin-top: 30px;
+  }
+  .contenar .opinions .card:nth-child(2) {
+    margin-top: 30px;
+  }
+  .contenar .opinions .card:last-child {
+    margin-top: 30px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
